@@ -1,0 +1,10 @@
+% Encoding: UTF-8
+
+@Misc{test_ref,
+  author =       {Author},
+  title =        {Title},
+  howpublished = {Published},
+  month =        feb,
+  year =         {2016},
+  note =         {This is a test entry for BibTeX database}
+}

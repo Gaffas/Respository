@@ -1,0 +1,216 @@
+%% Sample dissertation using the kau_report LaTeX class
+%%
+%% 950203  Michael Kelsey -- LaTeX2e format (cit_thesis)
+%% 990210  Anna Brunstrom -- Modified to KAU requirements
+%% 990420  Anna Brunstrom -- Copyright page added + some minor updates
+
+%\documentclass{kaumasters}
+\documentclass[12pt,twoside]{Classfiles/kau_report}
+
+\usepackage{float}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{url}
+\usepackage{subfig}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pdfpages}
+\usepackage{mathtools}
+\usepackage{chngcntr}
+%\usepackage{refcheck}
+
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
+
+\AtBeginDocument{\counterwithin{lstlisting}{section}}
+
+\setlength{\fboxsep}{0pt}
+
+\definecolor{dkgreen}{rgb}{0, 0.6, 0}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{mauve}{rgb}{0.58, 0, 0.82}
+\lstset
+{
+	frame=tb,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=left,
+	numberstyle=\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+}
+
+% If you write in Swedish, uncomment line below
+%\usepackage{swedish} %%Broken
+
+% Define the parameters in the preamble
+
+\title{Title of Dissertation\\ 
+\large Subtitle of Dissertation of the most awesome theisis}
+\swetitle{Examensarbetets Titel\\ 
+\large Underrubrik till Examensarbetet av det hetaste Uppdraget}
+
+\pubnum{June, 2016}
+\swepubnum{Juni, 2016}
+
+\author{Nicklas Hasselstr\"om}
+
+\date{\today}
+
+\advisor{Thijs. J. Holleboom}
+\examiner{Donald F. Ross}
+
+% The actual document starts here
+\begin{document}
+% Create the title page. If you write in swedish use the second line below instead.
+\makekautitle
+\makeswekautitle
+
+%% Create the copyright page. If you write in swedish use the second line below instead.
+\copyrightpage
+%\swecopyrightpage
+
+ %Start roman numbering
+\begin{frontmatter}
+
+% Create approval page. select the appropriate command depending
+% on how many authors you have. If you write in swedish use 
+% one of the sweapproved lines below instead.
+%\approved
+\approved
+%\approvedthree{Author One}{Author Two}{Author Three}
+%\sweapproved
+%\sweapprovedtwo{Author One}{Author Two}
+%\sweapprovedthree{Author One}{Author Two}{Author Three}
+
+% Create abstract 
+\begin{abstract}
+%Motivation:
+
+%Problem statement:
+
+%Approach:
+
+%Results:
+
+%Conclusions:
+English Abstract\cite{test_ref,Hill00systemarchitecture}
+\\
+% KEYWORDS
+\\
+\textbf{Keywords:} My kewords
+
+
+\end{abstract}
+\cleardoublepage
+
+
+% If you write in swedish you need a second abstract in  English. Uncomment lines below for the second absract.
+\renewcommand{\abstractname}{Abstract (In Swedish)}
+\begin{abstract}
+%Motivation:
+%Problem statement:
+%Approach:
+%Results:
+%Conclusions:
+Svensk Abstrakt
+\\
+% NYCEKLORD
+\\
+\textbf{Nyckelord:} Mina nyckelord
+
+\end{abstract}
+\cleardoublepage
+
+% Create acknowledgements (optional part)
+\begin{acknowledgements}
+% If you want acknowledgements they go here
+Tack alla
+\end{acknowledgements}
+\cleardoublepage
+
+% Set up contents, list of figures and list of tables
+  \tableofcontents
+  \cleardoublepage
+
+  \listoffigures
+  \cleardoublepage
+
+  \listoftables
+  \cleardoublepage
+  
+  \lstlistoflistings
+  \cleardoublepage
+
+\end{frontmatter}
+% End of roman numbering
+
+% Here comes the main body, it's your job to fill this in...
+\section{Introduction}
+\label{sec:intro}
+\input{1_Intro/Introduction.tex}
+\cleardoublepage
+
+\section{Background}
+\label{sec:back}
+\input{2_Back/Background.tex}
+\cleardoublepage
+
+\section{Design}
+\label{sec:design}
+\input{3_Design/Design.tex}
+\cleardoublepage
+
+\section{Implementation}
+\label{sec:impl}
+\input{4_Impl/Implementation.tex}
+\cleardoublepage
+
+\section{Results}
+\label{sec:result}
+\input{5_Result/Result.tex}
+\cleardoublepage
+
+\section{Conclusions}
+\label{sec:concl}
+\input{6_Concl/Conclusion.tex}
+\cleardoublepage
+
+\nocite{*}
+
+% Start of reference section. 
+\begin{singlespace}
+\bibliography{Appendices/myBibliography}
+\bibliographystyle{plain}
+\end{singlespace}
+\cleardoublepage
+
+% Appendix if present goes here (optional part)
+\appendix
+\section{Abbreviations}
+\label{app:abbr}
+\input{Appendices/abbreviations.tex}
+\cleardoublepage
+
+\section{Results}
+\label{app:results}
+\input{Appendices/Results.tex}
+\cleardoublepage
+
+\section{Code}
+\label{app:code}
+\input{Appendices/Code.tex}
+\cleardoublepage
+
+\section{Project Specification (In Swedish)}
+\label{app:projectspec}
+\input{Appendices/Specification.tex}
+
+\end{document}
