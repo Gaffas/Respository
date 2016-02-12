@@ -1,10 +1,22 @@
 % Encoding: UTF-8
 
-@Misc{test_ref,
-  author =       {Author},
-  title =        {Title},
-  howpublished = {Published},
-  month =        feb,
-  year =         {2016},
-  note =         {This is a test entry for BibTeX database}
+@InProceedings{telehealth,
+  author =    {Lakenauth, G. and Tang, S.},
+  title =     {Benefits of Telehealth across different socio-economic communities},
+  booktitle = {Systems, Applications and Technology Conference (LISAT), 2014 IEEE Long Island},
+  year =      {2014},
+  pages =     {1-6},
+  month =     {May},
+  doi =       {10.1109/LISAT.2014.6845197},
+  keywords =  {assisted living;graphical user interfaces;medical computing;notebook computers;socio-economic effects;telemedicine;New York City Economic Development Corporation;VICS;blood pressure improvement;cellular tablets;clinical advice;data collection;health-awareness;healthcare access;healthcare cost reduction;high-income retirement communities;low-income retirement communities;medication reminders;national healthcare issue;older adult care quality improvement;oxygen saturation improvement;personalized daily questions;research grant;sign measurements;socio-economic communities;telehealth intervention;telehealth servicing company;telehealth technology;undergraduate students;vital care services;weight improvement;Biomedical monitoring;Blood;Blood pressure;Communities;Medical services;Monitoring;Pressure measurement}
+}
+
+@Book{UNpub,
+  title =     {World Population Prospects : The 2008 Revision.},
+  publisher = {United Nations Publications},
+  year =      {2009},
+  author =    {United, Nations},
+  abstract =  {'United Nations publication. Sales nos. E.10. XIII.2'--T.p. verso.},
+  isbn =      {9789211514643},
+  url =       {https://login.bibproxy.kau.se:8443/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=450813&lang=sv&site=eds-live}
 }

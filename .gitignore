@@ -49,3 +49,11 @@ Temporary Items
 *.log
 *.gz
 *.out
+*.lof
+*.lot
+*.pdf
+*.bak
+*.bbl
+*.toc
+*.blg
+*.bak
