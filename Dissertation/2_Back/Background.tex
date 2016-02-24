@@ -26,7 +26,7 @@
 \subsection{Mobile gateway}
 \label{sub:gateway}
 	This is the main focus of this thesis, to develop a prototype which takes the functionality of the router and combine this with the mobility of a mobile device such as a phone. To 
-	One part of the thesis is to evaluate which OS and producer would be most suitable for making a mobile gateway for Tieto Lifecare.\\
+	One part of the thesis is to evaluate which OS and producer would be most suitable for making a mobile gateway for Tieto Lifecare.
 	
 %Skriv mer om existerande lösningar. Continua
 
@@ -37,10 +37,28 @@
 
 \subsection{Continua}
 \label{sub:continua}
-Continua Alliance is a non-profit organization which works toward generating guidelines for medical equipment used in telehealth. 
+Continua Alliance is a non-profit organization which works toward generating guidelines for medical equipment used in telehealth. Companies who wish to use the logo provided by Continua must become a member for the organization and then submit their products for testing at a Continua certefied testing laboratory. After all tests has been passed they get a logo which can be used in commercial and adverts for the product.\\
+Continua is aiming to become an end to end(E2E) certification to assure that each component in a chain of medical equipment can be interchanged with ease. It is supposed to work with easy plug and play(PnP) standard. If one product is certified, then the next one can be switched by a third without having to change the interface between them.\\
+\begin{figure}[]
+	\centering
+    	\includegraphics[width=0.9\textwidth]{Pictures/e2eArch}
+		\caption{Continua E2E Architecture}
+		Source: \href{http://www.continuaalliance.org/}{Continua Health Alliance}
+	\label{fig:e2eArch}
+\end{figure}
+	In figure~\ref{fig:e2eArch} the E2E architecture of continua is shown. At the left end there is the personal health devices(PHD) which includes scales, thermometers, blood pressure measurement device and so forth. These devices is connected to a aggregation device, shown as a personal health gateway(PHG) in the figure. The interface between the PHD and PHG depends on which kind of device. It can be three kinds of interfaces~\cite{tanpanlan}. Touch  area network(TAN-IF), personal area network(PAN-IF) and local area network(LAN-IF).\\
+	The link between the PHG and the health and fitness service(HFS) is defined by the wide area network interface(WAN-IF)~\cite{wan-if}. If the PHD connected to a PHG is regarded as a front-end, then the HFS is regarded as the back-end of the E2E solution. The HFS communicates with both the PHG and with the health center. This is however out of the scope of this thesis which will cover a new PHG solution.\\
+	Between the PHD and PHG the Continua guidelines are based on the ISO/IEEE standard: 11073-10. Between the PHG and HFS, the guideline are based on the IHE PCD-01 Transaction: Communicate PCD Data. More about this in section~\ref{subsub:ieee11073}~and~\ref{subsub:ihepcd01}
 
 \subsubsection{ISO/IEEE 11073}
 \label{subsub:ieee11073}
+	Continua dictates that the standard being used for data transfer between the PHD and PHG is the one defined by ISO/IEEE 11073. This standard have been tested and implemented by all manufacturers who wish to continua-certificate their devices. 
+	
+	Antidote
+
+
+\subsubsection{IHE PCD-01}
+\label{subsub:ihepcd01}
 
 \subsubsection{Android BluetoothHealth}
 \label{subsub:bthealth}
