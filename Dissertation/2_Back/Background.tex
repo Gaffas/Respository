@@ -11,11 +11,11 @@
 \label{sub:telehealth}
 	Telehealth~\cite{telehealth} is a collection of medical equipment used to monitor and collect data of the patient in his or her home. Data which is collected can be from blood pressure, blood values, weight, surveillance of demented patients or security alarm. The patient can operate the devices and receive daily check ups from the health center.\\
 
-%Skriv mer här
+%Skriv mer här Nordic countries need for telehealth?
 
 \subsection{Tieto}
 \label{sub:tieto}
-	Tieto~\cite{tieto} is a Nordic cooperation with its headquarter in Finland. It has 13,720 employers as of the end of 2014. Some of the main focuses of Tieto is cloud driven IT services, healthcare and IT in the industry. One of the fastest growing section of Tieto is Industrial Internet which has a focus of Internet of Things (IoT).\\
+	Tieto~\cite{tieto} is a Nordic cooperation with their headquarters in Finland. It has 13,720 employers as of the end of 2014. Some of the main focuses of Tieto is cloud driven IT services, healthcare and IT in the industry. One of the fastest growing section of Tieto is Industrial Internet which has a focus of Internet of Things (IoT).\\
 	With the need for healthcare services Tieto have, within the section of Industrial Internet, developed a solution which connects the health center with the caretaker so that the caretaker can benefit from being monitored while living in the comfort of ones home. This solution is called Tieto Lifecare.
 
 \subsubsection{Lifecare}
@@ -52,13 +52,21 @@ Continua is aiming to become an end to end(E2E) certification to assure that eac
 
 \subsubsection{ISO/IEEE 11073}
 \label{subsub:ieee11073}
-	Continua dictates that the standard being used for data transfer between the PHD and PHG is the one defined by ISO/IEEE 11073. This standard have been tested and implemented by all manufacturers who wish to continua-certificate their devices. 
-	
-	Antidote
-
+	Continua dictates that the standard being used for data transfer between the PHD and PHG is the one defined by ISO/IEEE 11073. This group of standards have been tested and implemented by all manufacturers who wish to continua-certificate their devices. The standards itself is a group of standards for medical device communication. Each substandard regards one specific type of device. For example, IEEE 11073-20601 defines protocols for secure data transfer between an agent and a manager~\cite{hc_standards}.\\
+\begin{figure}[]
+	\centering
+    	\includegraphics[width=0.9\textwidth]{Pictures/ISO_11073_Agent_Manager}
+		\caption{Agent - Manager}
+		Source: \href{https://commons.wikimedia.org/wiki/File:ISO_11073_Agent_Manager.jpg}{Bernd.rottmann}
+	\label{fig:AgeMan}
+\end{figure}
+	An agent in the IEEE 11073 standard group is the part which provides the data \cite{wiki:11073}. It is implemented in the PHD and is the active part of the manager-agent relation. The manager is implemented in the PHG and acts as a receiver for the data the agent sends. It shall keep a copy of the data and update this data when new data is provided. The agent - manager architecture is shown in figure~\ref{fig:AgeMan}. Since the structure of the manager and agent is similar, it allows the manager to act as an agent and vice versa.\\
+	One research team has developed an open source library, Antidote~\cite{11073Antidote}, which implements the IEEE 11073:20601 protocol. This library will be evaluated during this thesis and if possible, the library will be used in the implementation of the mobile gateway.
 
 \subsubsection{IHE PCD-01}
 \label{subsub:ihepcd01}
+	Between the PHG and HFS, Continua focus on the standard by Integrating the Healthcare Enterprise (IHE).
+
 
 \subsubsection{Android BluetoothHealth}
 \label{subsub:bthealth}
