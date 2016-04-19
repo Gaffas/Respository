@@ -112,7 +112,6 @@
 \begin{diary}{Fredag}{2016-02-26 08:00-12:00}
 	Rapportskrivning sedan handledarmöte.
 \end{diary}
-\newpage
 
 \begin{diary}{Måndag}{2016-02-29}
 \vecka{9}
@@ -156,7 +155,6 @@
 \begin{diary}{Fredag}{2016-03-11}
 	Sjuk. Handledarmöte
 \end{diary}
-\newpage
 
 \begin{diary}{Måndag}{2016-03-14}
 \vecka{11}
@@ -225,10 +223,54 @@
 
 \begin{diary}{Måndag}{2016-04-04 08:00-17:00}
 \vecka{14}
+	Börjar på att kolla på uppkopplingen till Meteor, en servertjänst eSense använder sig av för att vidarebefodra data till Home API. Det finns bibliotek  med exempel till android som har utvecklas för att bygga native apps. Implementerar detta och ser om jag lyckas.
 \end{diary}
 
 \begin{diary}{Tisdag}{2016-04-05 08:00-17:00}
+	Jobbar vidare med att få androidklienten till meteor att fungera. Märkte att nätverkstrafiken skickade ett svagt ping men den gav inget utslag. Det är som att den kopplar ned direkt efter den kopplat upp. Hålls servicen vid liv?
+\end{diary}
 
+\begin{diary}{Onsdag}{2016-04-06 08:00-17:00}
+	Ger tillfälligt upp på att köra service i bakgrunden och gör en lösning där jag håller aktiviteten vid liv. Kan nu koppla upp mot serven, skicka data och läsa av callbacks genom olika manuella kommandon. Kommer bli tvungen att anpassa detta till en bakgrundsservice. Läser på om skillnaden mellan Service och IntentService.
+\end{diary}
+
+\begin{diary}{Torsdag}{2016-04-07 08:00-17:00}
+	Båda delarna av projektet fungerar nu men separat. Jag kan ta emot data från device och skicka till meteor men inte i samma app. Kommer lägga tid framöver på att lägga till funktionaliteten i HealthServiceTest till den i MobileGateway. Sändfunktionen ser dock fortfarande i en aktiv activity.
+\end{diary}
+
+\begin{diary}{Fredag}{2016-04-08 08:00-17:00}
+	Handledarmöte. Satt i skolan och skrev på progressrapporten.
+\end{diary}
+
+\begin{diary}{Måndag}{2016-04-11 08:00-17:00}
+\vecka{15}
+	Försöker sätta över funktionaliteten vidare. Konstiga fel gör att appen krashar och jag får inga felmeddelanden då den krashar i native biblioteket. Ser inte vad som ska göras för att få det att fungera.
+\end{diary}
+
+\begin{diary}{Tisdag}{2016-04-12 08:00-17:00}
+	Får äntligen ordning på inDatan som kommer från mätutrustningen. Största problemet var att jag inte kunde se vart som problemet låg. Det visade sig att jaag hade glömt att initiera en lista som jag sedan försökte lägga till object i. Då felmeddelandet kom från Antidote var detta svårt att upptäcka och jag fick lägga till en del i taget tills det till slut fungerade.
+\end{diary}
+
+\begin{diary}{Onsdag}{2016-04-13 08:00-17:00}
+	Jobbar vidare med att få en service att köra i bakgrunden. 
+\end{diary}
+
+\begin{diary}{Torsdag}{2016-04-14 08:00-17:00}
+	Lyckas äntligen få servicen för kommunikation att köra i bakgrunden. Tar små steg och ser till att Servicen kör medans jag lägger till implementationen för MeteorCallback. Klarar av att göra det som activity-versonen av kommunikations klassen kan vid slutet av dagen.
+\end{diary}
+
+\begin{diary}{Fredag}{2016-04-15}
+	Hemma idag.
+\end{diary}
+\newpage
+
+\begin{diary}{Måndag}{2016-04-18 08:00-17:00}
+\vecka{16}
+	Idag byggde jag om inne på servern för att lägga till min metod för att ta emot data. Krånglade en massa med hur data ska skickas med Object[] param formatet. Tog nästan hela dagen att få ordning på det. Lyckades skicka allt som behövs för att meteor ska kunna vidarebefodra förutom measurement stringen.
+\end{diary}
+
+\begin{diary}{Tisdag}{2016-04-19 08:00-17:00}
+	Fick äntligen end to end kommunikationen att fungera. Det gick att parsa om ett json-sträng till json-object på servern i javascript vilket löste problemet från igår. Nu kan jag ta tag i rapportskrivandet tills jag har kommit ikapp med det. Rapportskrivande resten av dagen. Börjar med att uppdatera dagboken med händelser från de gångna veckorna.
 \end{diary}
 
 \begin{diary}{Onsdag}{2016-04-06 08:00-17:00}
@@ -240,8 +282,9 @@
 \end{diary}
 
 \begin{diary}{Fredag}{2016-04-08 08:00-17:00}
-	Handledarmöte
+
 \end{diary}
+
 
 
 \end{document}
