@@ -2,4 +2,22 @@
 %Can you use a single Picture to summarise your Design?
 %Information - Give details here (possibly several sub-sections)
 %Chapter Summary
-Design text
+Data flow
+When the patient is doing an measurement with the medical equipment, data is generated in that device. This data is being sent to the mobile gateway over bluetooth and the gateway is acting like an server in this case, listening to transfer request from the medical device. If the medical device can not send its data, it stores it locally. The data is stored with all values and a timestamp of which time the measurement has been performed. 
+
+
+
+Gateway - Medical Device interaction
+Between the medical device and the phone the data is transmitted over bluetooth. The device must first pair with the phone and then the phone works as a server, waiting for data. This in line with the continua guideline on communication between continua certified units. To make this work, the Antidote framework was implemented.
+
+Antidote
+Antidote is an IEEE 11073 protocol stack library by signove. Signove is a company, working with connected health. They have implemented the library to provide simple communication between medical equipment. The library is open source and will work just fine in developing the prototype. To make the library work with teh application, it had to be build as a native library and then included in the project. Signove provided some sample applications for android, which were used in this project.
+
+Antidote native build
+The library is written in C so it has to be implemented with a bridge between the library and the application. Since the application is written in Java, the 
+
+Gateway - eSense interaction
+
+In Phone Functionality
+
+Testing environment and data mocking
